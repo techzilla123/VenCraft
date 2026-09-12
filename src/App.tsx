@@ -5,9 +5,10 @@ import imgHeroPhoto from "../src/imports/DigitalMarketingAgency/fcf2279665e23b39
 import imgTeamPhoto from "../src/imports/DigitalMarketingAgency/6b463a707529cf38dc17862f0c190f9a7386a3d4.png";
 import imgAvatar1 from "../src/imports/DigitalMarketingAgency/c53b009da68910012c6184849d60db9ccbd2596d.png";
 import imgAvatar2 from "../src/imports/DigitalMarketingAgency/6616b71b5eaa0d45d2b33754bd3f756fd0d11ddf.png";
-import imgTechzilla from "../src/imports/Screenshot_2026-07-28_100144.png";
-import imgMaserTravel from "../src/imports/Screenshot_2026-06-11_034801.png";
-import imgMaleteHostels from "../src/imports/image-12.png";
+// Portfolio screenshots served as static public assets (avoids Git LFS issues in production)
+const imgTechzilla    = "/portfolio-techzilla.png";
+const imgMaserTravel  = "/portfolio-maser.png";
+const imgMaleteHostels = "/portfolio-malete.png";
 
 // ── Unsplash image URLs (external CDN — no Vite import needed) ────────────────
 const U = {
