@@ -1,0 +1,10 @@
+{
+  "description": "Enables users to create precise, custom designs quickly and efficiently, streamlining the design process for professionals and creatives alike.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
