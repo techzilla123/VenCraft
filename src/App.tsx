@@ -5,6 +5,9 @@ import imgHeroPhoto from "../src/imports/DigitalMarketingAgency/fcf2279665e23b39
 import imgTeamPhoto from "../src/imports/DigitalMarketingAgency/6b463a707529cf38dc17862f0c190f9a7386a3d4.png";
 import imgAvatar1 from "../src/imports/DigitalMarketingAgency/c53b009da68910012c6184849d60db9ccbd2596d.png";
 import imgAvatar2 from "../src/imports/DigitalMarketingAgency/6616b71b5eaa0d45d2b33754bd3f756fd0d11ddf.png";
+import imgTechzilla from "../src/imports/Screenshot_2026-07-28_100144.png";
+import imgMaserTravel from "../src/imports/Screenshot_2026-06-11_034801.png";
+import imgMaleteHostels from "../src/imports/image-12.png";
 
 // ── Unsplash image URLs (external CDN — no Vite import needed) ────────────────
 const U = {
@@ -256,8 +259,8 @@ const navDropdowns: Record<string, { title: string; desc: string; tag?: string }
     { title: "Launch & Scale", desc: "Live product, funded & growing", tag: "Step 4" },
   ],
   "Case Studies": [
-    { title: "FlowFund — $1.2M", desc: "Pre-seed fintech raised in 6 weeks" },
-    { title: "DriftAI — $2.8M", desc: "Revenue intelligence for SaaS teams" },
+    { title: "Techzilla Inc.", desc: "Full-stack digital product studio — Full Build" },
+    { title: "Maser Global Travels", desc: "Travel platform — MVP launched end-to-end" },
     { title: "Loopcast — $3.5M", desc: "Podcast growth platform seed round" },
     { title: "Nexos — $4.2M", desc: "Cross-border payments infrastructure" },
   ],
@@ -858,14 +861,14 @@ function VideoModal({ onClose }: { onClose: () => void }) {
         <div>
           <div style={rise(0.3,18,0.75)}>
             <p style={{ ...pjsSemi, color:"rgba(255,255,255,0.88)", fontSize:18, lineHeight:1.72, letterSpacing:"-0.3px", maxWidth:500 }}>
-              "We raised our seed round six weeks after joining VenCraft. Our investor said our deck was the best they'd seen all year. VenCraft collapsed months of work into days."
+              "VenCraft didn't just build our platform — they understood the vision and brought it to life better than we imagined. Techzilla wouldn't be where it is today without them."
             </p>
           </div>
           <div style={{ display:"flex", alignItems:"center", gap:14, marginTop:24, ...rise(1.6,14,0.55) }}>
-            <img src={U.amaraAvatar} alt="Amara Osei" style={{ width:48,height:48,borderRadius:"50%",objectFit:"cover",border:"2px solid rgba(153,234,72,0.35)",flexShrink:0 }} />
+            <img src="https://images.unsplash.com/photo-1620932934088-fbdb2920e484?w=120&q=80" alt="Techzilla Inc." style={{ width:48,height:48,borderRadius:"50%",objectFit:"cover",border:"2px solid rgba(153,234,72,0.35)",flexShrink:0 }} />
             <div>
-              <p style={{ ...pjsBold, color:"white", fontSize:14, marginBottom:2 }}>Amara Osei</p>
-              <p style={{ ...pjsMed, color:"#99ea48", fontSize:11 }}>Founder, FlowFund &nbsp;·&nbsp; $1.2M raised in 6 weeks</p>
+              <p style={{ ...pjsBold, color:"white", fontSize:14, marginBottom:2 }}>Techzilla Inc.</p>
+              <p style={{ ...pjsMed, color:"#99ea48", fontSize:11 }}>Founder &nbsp;·&nbsp; techzilla.online</p>
             </div>
             <div style={{ marginLeft:16, display:"flex", gap:3, opacity:ea(2.4,0.5) }}>
               {[1,2,3,4,5].map(i=><span key={i} style={{ color:"#99ea48", fontSize:16 }}>★</span>)}
@@ -1687,37 +1690,105 @@ function PipelineSection({ onVideoOpen }: { onVideoOpen: () => void }) {
 }
 
 // ── Portfolio ─────────────────────────────────────────────────
-type Project = { cohort: string; title: string; img: string; stage: "pre-seed" | "seed" | "series-a"; raised: string; desc: string };
+type Project = { cohort: string; title: string; img: string; stage: "pre-seed" | "seed" | "series-a"; badge: string; url: string; desc: string };
 
 const ALL_PROJECTS: Project[] = [
-  { cohort: "Cohort 03. 2024", title: "FlowFund – AI-Powered Financial Planning for Founders", img: U.fintechApp,    stage: "pre-seed", raised: "$1.2M", desc: "FlowFund automates financial planning for early-stage founders — from runway modeling to investor-ready statements." },
-  { cohort: "Cohort 04. 2024", title: "DriftAI – Revenue Intelligence Platform for SaaS",      img: U.analytics,     stage: "pre-seed", raised: "$2.8M", desc: "DriftAI gives SaaS founders real-time revenue intelligence — churn prediction, expansion signals, and growth playbooks." },
-  { cohort: "Cohort 05. 2024", title: "Loopcast – Podcast Monetization for Creators",          img: U.mobileApp,     stage: "seed",     raised: "$3.5M", desc: "Loopcast turns podcast audiences into recurring revenue with native sponsorships, paid memberships, and AI-matched ads." },
-  { cohort: "Cohort 06. 2024", title: "Nexos – B2B Procurement Intelligence",                  img: U.pitchMeeting,  stage: "seed",     raised: "$4.2M", desc: "Nexos surfaces hidden procurement inefficiencies across enterprise supply chains using real-time contract intelligence." },
-  { cohort: "Cohort 01. 2023", title: "Buildfast – No-Code App Builder for Enterprises",       img: U.screenMonitor, stage: "series-a", raised: "$12M",  desc: "Buildfast lets non-technical teams ship internal tools and customer portals in hours — without writing a line of code." },
-  { cohort: "Cohort 02. 2023", title: "Skywise – AI Flight Operations Platform",               img: U.collab,        stage: "series-a", raised: "$18M",  desc: "Skywise gives commercial airlines predictive maintenance signals and operational intelligence to reduce delays and costs." },
+  // ── Real featured clients ─────────────────────────────────────────────────
+  {
+    cohort: "Featured · Techzilla Inc. 2026",
+    title: "Techzilla Inc. — Full-Stack Digital Product Studio",
+    img: imgTechzilla,
+    stage: "pre-seed",
+    badge: "Full Build",
+    url: "https://www.techzilla.online/",
+    desc: "Techzilla builds scalable web apps, mobile products, and AI-powered tools — code with craft, ship with intention. VenCraft co-built their brand platform, portfolio, and go-to-market presence from the ground up, helping them land their first enterprise clients.",
+  },
+  {
+    cohort: "Featured · Maser Global 2026",
+    title: "Maser Global Travels — Elegance in Global Flight",
+    img: imgMaserTravel,
+    stage: "seed",
+    badge: "MVP Launch",
+    url: "https://maser-global-travels.vercel.app/",
+    desc: "Maser Global Travels redefines the standard of travel — from bespoke Hajj & Umrah experiences to seamless corporate visa processing. VenCraft built their web platform and brand identity end-to-end, enabling them to go from idea to live product in record time.",
+  },
+  {
+    cohort: "Featured · Malete Hostels 2026",
+    title: "Malete Hostels — Get Your Dream Hostel, Stress-Free",
+    img: imgMaleteHostels,
+    stage: "series-a",
+    badge: "Site + Brand",
+    url: "https://malete-hostels.vercel.app/",
+    desc: "Malete Hostels lets students find affordable KWASU hostels directly from landlords — no agents, no walking under the hot Malete sun. VenCraft built their booking platform and online presence from scratch.",
+  },
+  // ── Cohort portfolio ──────────────────────────────────────────────────────
+  { cohort: "Cohort 03. 2024", title: "FlowFund – AI-Powered Financial Planning for Founders", img: U.fintechApp,    stage: "pre-seed", badge: "$1.2M raised", url: "#", desc: "FlowFund automates financial planning for early-stage founders — from runway modeling to investor-ready statements." },
+  { cohort: "Cohort 04. 2024", title: "DriftAI – Revenue Intelligence Platform for SaaS",      img: U.analytics,     stage: "pre-seed", badge: "$2.8M raised", url: "#", desc: "DriftAI gives SaaS founders real-time revenue intelligence — churn prediction, expansion signals, and growth playbooks." },
+  { cohort: "Cohort 05. 2024", title: "Loopcast – Podcast Monetization for Creators",          img: U.mobileApp,     stage: "seed",     badge: "$3.5M raised", url: "#", desc: "Loopcast turns podcast audiences into recurring revenue with native sponsorships, paid memberships, and AI-matched ads." },
+  { cohort: "Cohort 06. 2024", title: "Nexos – B2B Procurement Intelligence",                  img: U.pitchMeeting,  stage: "seed",     badge: "$4.2M raised", url: "#", desc: "Nexos surfaces hidden procurement inefficiencies across enterprise supply chains using real-time contract intelligence." },
+  { cohort: "Cohort 01. 2023", title: "Buildfast – No-Code App Builder for Enterprises",       img: U.screenMonitor, stage: "series-a", badge: "$12M raised",  url: "#", desc: "Buildfast lets non-technical teams ship internal tools and customer portals in hours — without writing a line of code." },
+  { cohort: "Cohort 02. 2023", title: "Skywise – AI Flight Operations Platform",               img: U.collab,        stage: "series-a", badge: "$18M raised",  url: "#", desc: "Skywise gives commercial airlines predictive maintenance signals and operational intelligence to reduce delays and costs." },
 ];
 
 const portfolioTabs = ["All Cohorts [20]", "Pre-Seed [10]", "Seed Round [5]", "Series A [5]"];
 
+// The 3 real featured clients — always used for the chooser popup and tab card pairs
+const REAL_PROJECTS = ALL_PROJECTS.slice(0, 3); // Techzilla, Maser, Malete
+
+// 2 project cards shown per tab (rotating combinations of the 3 real projects)
+const TAB_PAIRS: [Project, Project][] = [
+  [REAL_PROJECTS[0], REAL_PROJECTS[1]], // All Cohorts:  Techzilla + Maser
+  [REAL_PROJECTS[0], REAL_PROJECTS[2]], // Pre-Seed:     Techzilla + Malete
+  [REAL_PROJECTS[1], REAL_PROJECTS[2]], // Seed Round:   Maser + Malete
+  [REAL_PROJECTS[0], REAL_PROJECTS[1]], // Series A:     Techzilla + Maser
+];
+
 function PortfolioSection() {
   const { ref: portRef, inView: portVisible } = useInView(0.06);
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab]     = useState(0);
+  const [chooserOpen, setChooserOpen] = useState(false);
   const [detailProject, setDetailProject] = useState<Project | null>(null);
 
-  const filtered =
-    activeTab === 0 ? ALL_PROJECTS :
-    activeTab === 1 ? ALL_PROJECTS.filter((p) => p.stage === "pre-seed") :
-    activeTab === 2 ? ALL_PROJECTS.filter((p) => p.stage === "seed") :
-    ALL_PROJECTS.filter((p) => p.stage === "series-a");
+  const shown = TAB_PAIRS[activeTab];
 
-  // Show max 2 project cards + the circle
-  const shown = filtered.slice(0, 2);
-  const circleProject = filtered[0];
+  const openDetail = (p: Project) => { setDetailProject(p); setChooserOpen(false); };
 
   return (
     <>
-      {/* Project detail modal */}
+      {/* ── Chooser popup — pick one of the 3 real featured projects ── */}
+      {chooserOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" style={{ background: "rgba(0,0,0,0.88)" }} onClick={() => setChooserOpen(false)}>
+          <div className="relative w-full max-w-[780px]" onClick={(e) => e.stopPropagation()}>
+            {/* Header */}
+            <div className="flex items-center justify-between mb-6 px-1">
+              <h3 className="text-white text-[22px] sm:text-[26px] leading-tight tracking-[-0.5px]" style={pjsSemi}>Our Featured Clients</h3>
+              <button onClick={() => setChooserOpen(false)} className="text-white/50 hover:text-white transition-colors text-[28px] leading-none">×</button>
+            </div>
+            {/* 3 project cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {REAL_PROJECTS.map((p, ri) => (
+                <button
+                  key={`chooser-${ri}`}
+                  onClick={() => openDetail(p)}
+                  className="group rounded-[20px] overflow-hidden relative h-[200px] sm:h-[240px] text-left cursor-pointer border-2 border-white/10 hover:border-[#99ea48] transition-colors"
+                >
+                  <img src={p.img} alt={p.title} className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-300" />
+                  <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 30%, rgba(2,6,9,0.85))" }} />
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <span className="inline-block bg-[#99ea48] rounded-full px-2.5 py-0.5 text-[11px] text-[#010205] mb-2" style={pjsBold}>{p.badge}</span>
+                    <p className="text-white text-[13px] sm:text-[14px] leading-[1.4]" style={pjsSemi}>{p.title}</p>
+                  </div>
+                  <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-[#99ea48] rounded-full w-7 h-7 flex items-center justify-center">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M12 5l7 7-7 7" stroke="#010205" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── Project detail modal ── */}
       {detailProject && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" style={{ background: "rgba(0,0,0,0.88)" }} onClick={() => setDetailProject(null)}>
           <div className="relative bg-white rounded-[24px] overflow-hidden w-full max-w-[620px]" onClick={(e) => e.stopPropagation()}>
@@ -1732,13 +1803,19 @@ function PortfolioSection() {
             <div className="p-6 sm:p-8 flex flex-col gap-4">
               <div className="flex items-start justify-between gap-4">
                 <h3 className="text-[#010205] text-[20px] sm:text-[24px] leading-[1.4] tracking-[-0.5px]" style={pjsSemi}>{detailProject.title}</h3>
-                <span className="shrink-0 bg-[#99ea48] rounded-full px-3 py-1 text-[13px] text-[#010205]" style={pjsBold}>{detailProject.raised} raised</span>
+                <span className="shrink-0 bg-[#99ea48] rounded-full px-3 py-1 text-[13px] text-[#010205]" style={pjsBold}>{detailProject.badge}</span>
               </div>
               <p className="text-[#878c91] text-[15px] leading-[1.8]" style={pjsMed}>{detailProject.desc}</p>
               <div className="flex gap-3 pt-2">
-                <button className="flex-1 bg-[#010205] rounded-full py-3.5 text-white text-[14px] hover:bg-[#99ea48] hover:text-black transition-colors" style={pjsBold}>
-                  View Full Case Study →
-                </button>
+                {detailProject.url !== "#" ? (
+                  <a href={detailProject.url} target="_blank" rel="noopener noreferrer" className="flex-1 bg-[#010205] rounded-full py-3.5 text-white text-[14px] hover:bg-[#99ea48] hover:text-black transition-colors text-center" style={pjsBold}>
+                    Visit Website →
+                  </a>
+                ) : (
+                  <button className="flex-1 bg-[#010205] rounded-full py-3.5 text-white text-[14px] hover:bg-[#99ea48] hover:text-black transition-colors" style={pjsBold}>
+                    View Full Case Study →
+                  </button>
+                )}
                 <button onClick={() => setDetailProject(null)} className="border border-gray-200 rounded-full px-5 py-3.5 text-[14px] text-[#010205] hover:bg-gray-50 transition-colors" style={pjsSemi}>
                   Close
                 </button>
@@ -1772,14 +1849,14 @@ function PortfolioSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 items-stretch overflow-x-auto pb-2">
-              {/* Circle "See Details" card */}
+              {/* Circle "See Details" — opens chooser */}
               <div className="flex items-center justify-center shrink-0">
                 <div className="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] lg:w-[380px] lg:h-[380px] rounded-full border-[11px] border-white/20 overflow-hidden mx-auto">
-                  {circleProject && <img src={circleProject.img} alt="" className="absolute inset-0 w-full h-full object-cover opacity-60" />}
+                  <img src={U.pitchMeeting} alt="" className="absolute inset-0 w-full h-full object-cover opacity-60" />
                   <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.35)" }} />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <button
-                      onClick={() => circleProject && setDetailProject(circleProject)}
+                      onClick={() => setChooserOpen(true)}
                       className="bg-[#99ea48] rounded-full px-5 py-3 text-black text-[16px] hover:bg-[#8fd43e] transition-colors"
                       style={pjsBold}
                     >
@@ -1789,10 +1866,10 @@ function PortfolioSection() {
                 </div>
               </div>
 
-              {/* Project cards — hidden on mobile, visible on sm+ */}
+              {/* 2 project cards — hidden on mobile, visible on sm+ */}
               <div className="hidden sm:contents">
-                {shown.map((p) => (
-                  <ProjectCard key={p.cohort} project={p} onClick={() => setDetailProject(p)} />
+                {shown.map((p, si) => (
+                  <ProjectCard key={`tab${activeTab}-card${si}`} project={p} onClick={() => openDetail(p)} />
                 ))}
               </div>
             </div>
@@ -1818,7 +1895,7 @@ function ProjectCard({ project, onClick }: { project: Project; onClick: () => vo
       <div className="relative">
         <p className="text-white text-[18px] sm:text-[22px] leading-[1.4] mb-3" style={pjsSemi}>{project.title}</p>
         <div className="flex items-center justify-between">
-          <span className="text-[#99ea48] text-[13px]" style={pjsBold}>{project.raised} raised</span>
+          <span className="text-[#99ea48] text-[13px]" style={pjsBold}>{project.badge} · VenCraft</span>
           <div className="bg-white/20 rounded-full p-2 group-hover:bg-[#99ea48] transition-colors">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
               <path d="M5 12H19M12 5l7 7-7 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -1832,6 +1909,7 @@ function ProjectCard({ project, onClick }: { project: Project; onClick: () => vo
 
 // ── Testimonial ───────────────────────────────────────────────
 const testimonials = [
+  { quote: "VenCraft didn't just build our platform — they understood the vision and brought it to life better than we imagined. From our brand identity to our first enterprise client pitch, everything was handled with craft and speed. Techzilla wouldn't be where it is today without them.", name: "Techzilla Inc.", title: "Founder, Techzilla Inc. · techzilla.online", avatar: "https://images.unsplash.com/photo-1620932934088-fbdb2920e484?w=120&q=80" },
   { quote: "We raised our seed round six weeks after joining VenCraft. Our investor said our deck was the best they'd seen all year. What sets VenCraft apart is their ability to collapse months of work into days — they built our prototype and our pitch in the same breath.", name: "Amara Osei",   title: "Founder, FlowFund · $1.2M raised", avatar: U.amaraAvatar },
   { quote: "VenCraft's prototype was more polished than what most funded startups ship in v1. The pitch deck they generated was investor-ready out of the box. I had a term sheet within 5 weeks. It's genuinely unfair to founders who don't know about this.",             name: "Soren Malik",  title: "Founder, DriftAI · $2.8M raised",  avatar: U.sorenAvatar },
   { quote: "The pipeline is real. I came in with a napkin sketch and left 47 days later with a live product and a signed term sheet. The team knows exactly what VCs want to see — because half of them used to be VCs.",                                                    name: "Keiko Tanaka", title: "Founder, Loopcast · $900K raised",  avatar: U.keikoAvatar },
